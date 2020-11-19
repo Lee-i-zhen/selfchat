@@ -10,10 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet var sendMessage: UITextField!
+    @IBOutlet var receiveMessage: UILabel!
+    
+    var passMessage  = " "
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        receiveMessage.text = passMessage
     }
     
 
