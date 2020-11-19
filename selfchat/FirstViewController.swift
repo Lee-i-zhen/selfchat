@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    //第一個轉場
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "change"{
             let des = segue.destination as! SecondViewController
@@ -27,6 +28,12 @@ class FirstViewController: UIViewController {
         }
                 
         }
-
+    //轉場轉回來
+    @IBAction func backto(segue: UIStoryboardSegue){
+        let src = segue.source as! SecondViewController
+        receiveMessage.text = src.sendMessage.text
+        dismiss(animated: true, completion: nil)
+    }
+    
     }
 
